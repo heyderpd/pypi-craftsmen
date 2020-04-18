@@ -1,5 +1,5 @@
 def blaublau():
-  print('xablau')
+  print('xablau2')
 
 if __name__ == "__main__":
   blaublau()
