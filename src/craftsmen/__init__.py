@@ -1,10 +1,11 @@
-from .blaublau import xablau
+from .identity import identity
+from .compose import compose
+from .curry import curry
 
-from . import teste
-
-__version__ = '0.0.7'
+__version__ = '0.1.0'
 
 __all__ = [
-    'xablau',
-    'teste',
+    'identity',
+    'curry',
+    'compose',
 ]
