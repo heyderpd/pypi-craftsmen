@@ -1,4 +1,4 @@
-from src.craftsmen.curry import curry
+from src.craftsmen import curry
 from . import create_dummie_mock, mock_result, arg1, arg2, arg3
 
 def test_mock_function():
