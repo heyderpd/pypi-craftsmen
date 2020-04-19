@@ -1,5 +1,5 @@
 from src.craftsmen.curry_with_placeholder import curry
-from . import create_dummie_mock, mock_result, arg1, arg2, arg3
+from src.test import create_dummie_mock, mock_result, arg1, arg2, arg3
 
 def test_mock_function():
     _dummie, _mock = create_dummie_mock()

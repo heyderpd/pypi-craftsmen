@@ -3,15 +3,12 @@ from .placeholder import p
 class _Placeholders():
   def __init__(self, args):
     self.args = args
-    self.len = len(_filter_placeholder(args))
-
-def _filter_placeholder(args):
-    return tuple(v for v in args if v is not p)
+    self.len = len(tuple(v for v in args if v is not p))
 
 def _concat_args(placeholders, args):
     args.reverse()
     get_arg = lambda v: args.pop() if v is p else v
-    return tuple([get_arg(v) for v in placeholders.args] + args)
+    return tuple([get_arg(v) for v in placeholders.args] + args[::-1])
 
 def _check_len(args_count, placeholders, args):
     args_len = len(args) + placeholders.len
