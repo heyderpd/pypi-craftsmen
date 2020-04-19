@@ -1,4 +1,4 @@
-def _curry_builder(function, args_count, args_names, memo_args):
+def _curry_builder(function, args_count, args_names, memo_args=()):
     def dummie(*args):
         new_args = memo_args + args
         if len(new_args) >= args_count:

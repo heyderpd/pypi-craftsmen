@@ -1,5 +1,3 @@
-from . import setup, find_packages
-
 from .placeholder import p
 
 class _Placeholders():
@@ -21,14 +19,15 @@ def _check_len(args_count, placeholders, args):
 
 def _curry_builder(function, args_count, placeholders=None, memo_args=()):
     if placeholders is None:
-        def dummie_initializer(*args)
+        def dummie_initializer(*args):
             dummie = _curry_builder(
                 function,
                 args_count,
                 placeholders=_Placeholders(args),
-                memo_args=_filter_placeholder(args),
+                memo_args=(),
             )
-            return dummie(*args)
+            empty_args = ()
+            return dummie(*empty_args)
         return dummie_initializer
 
     def dummie(*args):
