@@ -1,9 +1,12 @@
 from .identity import identity
 from .curry.curry import curry
 from .curry.placeholder import placeholder, p
-from .compose import compose
+from .compose import compose, rcompose
+from .map import cmap
 
-__version__ = '0.1.0'
+map = cmap
+
+__version__ = '0.1.4'
 
 __all__ = [
     'identity',
@@ -11,4 +14,7 @@ __all__ = [
     'placeholder',
     'p',
     'compose',
+    'rcompose',
+    'cmap',
+    'map',
 ]
