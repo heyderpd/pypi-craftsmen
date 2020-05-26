@@ -5,7 +5,7 @@ from src.craftsmen import __version__
 setup(
     name='craftsmen',
     version=__version__,
-    packages=find_packages('src', exclude=('test*', 'examples')),
+    packages=find_packages('src', exclude=('test*', 'examples')) +['craftsmen/curry'],
     package_dir={'': 'src'},
     include_package_data=True,
     platforms='any',
